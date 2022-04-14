@@ -124,14 +124,22 @@ body {
   text-decoration: none;
   padding: 15px 40px;
   display: inline-block;
+<<<<<<< HEAD
   border-radius: 100px;
+=======
+  border-radius: 100px; /*Shapes the radius aROUND the corners*/
+>>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
   transition: all 0.2s;
   position: relative;
 }
 
 .btn:hover {
   transform: translateY(-3px);
+<<<<<<< HEAD
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+=======
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /*X axes, Y axes, Blur, Black with 20% transparency*/
+>>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
 }
 
 .btn:active {
@@ -150,6 +158,7 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 100px;
+<<<<<<< HEAD
   position: absolute;
 
   top: 0;
@@ -160,10 +169,23 @@ body {
 }
 
 .btn-white::after {
+=======
+  position: absolute; /*Absolute positioning needs to have a reference. 
+  The reference is the first element with a relative position that it can find.*/
+  top: 0;
+  left: 0;
+  z-index: -1; /*The z-index defines the position of the elements if they're one on top of another.
+                   This element is behind the button*/ 
+  transition: all .4s;
+}
+
+.btn-white::after{
+>>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
   background-color: white;
 }
 
 .btn:hover::after {
+<<<<<<< HEAD
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
@@ -172,3 +194,13 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
+=======
+  transform: scaleX(1.4) scaleY(1.6); /*To increase the element. You can set this with or without X&Y direction*/
+  opacity: 0; /*Will fade out the element*/
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; /*Will automatically apply the @keyframes styles at 0% before the animation starts*/
+}
+>>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
