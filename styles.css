@@ -106,28 +106,69 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
   display: inline-block;
-  border-radius: 100px; 
-  transition: all .2s;
+  border-radius: 100px; /*Shapes the radius aROUND the corners*/
+  transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2); 
-
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /*X axes, Y axes, Blur, Black with 20% transparency*/
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 0px rgba(0,0,0,.2);
+  box-shadow: 0 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
   background-color: white;
   color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute; /*Absolute positioning needs to have a reference. 
+  The reference is the first element with a relative position that it can find.*/
+  top: 0;
+  left: 0;
+  z-index: -1; /*The z-index defines the position of the elements if they're one on top of another.
+                   This element is behind the button*/ 
+  transition: all .4s;
+}
+
+.btn-white::after{
+  background-color: white;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6); /*To increase the element. You can set this with or without X&Y direction*/
+  opacity: 0; /*Will fade out the element*/
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; /*Will automatically apply the @keyframes styles at 0% before the animation starts*/
 }
