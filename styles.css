@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100;300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=M+PLUS+Code+Latin:wght@100;300;400;700&display=swap');
 
+
+ 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
   font-family: "M PLUS Code Latin", sans-serif;
   font-weight: 400;
@@ -14,7 +17,7 @@ body {
   color: black;
   padding: 30px;
 }
-
+ 
 .header {
   height: 95vh;
   background-image: linear-gradient(
@@ -22,23 +25,23 @@ body {
       rgba(43, 156, 171, 0.8),
       rgba(43, 47, 172, 0.8)
     ),
-    url(../public/img/brazil-hero.png);
+    url(./public/img/state-of-pernambuco.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
+ 
 .logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
 }
-
+ 
 .logo {
   height: 35px;
 }
-
+ 
 .text-box {
   position: absolute;
   top: 40%;
@@ -46,14 +49,14 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
+ 
 .heading-primary {
   color: #4bdf12;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 60px;
 }
-
+ 
 .heading-primary-main {
   display: block;
   font-size: 60px;
@@ -63,7 +66,7 @@ body {
   animation-duration: 3s;
   animation-timing-function: ease-out;
 }
-
+ 
 .heading-primary-sub {
   display: block;
   color: rgb(239, 239, 12);
@@ -73,134 +76,105 @@ body {
   letter-spacing: 17.4px;
   animation: moveInRight 3s ease-out;
 }
-
+ 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
     transform: translateX(-100px);
   }
-
+ 
   80% {
     transform: translateX(10px);
   }
-
+ 
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
-
+ 
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(100px);
   }
-
+ 
   80% {
     transform: translateX(-10px);
   }
-
+ 
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
-
+ 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
     transform: translateY(30px);
   }
-
+ 
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
-
+ 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
   display: inline-block;
-<<<<<<< HEAD
-  border-radius: 100px;
-=======
-  border-radius: 100px; /*Shapes the radius aROUND the corners*/
->>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
+  border-radius: 100px; 
   transition: all 0.2s;
   position: relative;
+  
 }
-
+ 
 .btn:hover {
   transform: translateY(-3px);
-<<<<<<< HEAD
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-=======
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /*X axes, Y axes, Blur, Black with 20% transparency*/
->>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
-
+ 
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 0px rgba(0, 0, 0, 0.2);
 }
-
+ 
 .btn-white {
-  background-color: white;
-  color: #777;
+  background-color: rgb(255, 217, 0);
+  color: rgb(0, 0, 0);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  
 }
-
+ 
 .btn::after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
   border-radius: 100px;
-<<<<<<< HEAD
-  position: absolute;
-
+  position: absolute; 
   top: 0;
   left: 0;
-  z-index: -1;
-
-  transition: all 0.4s;
-}
-
-.btn-white::after {
-=======
-  position: absolute; /*Absolute positioning needs to have a reference. 
-  The reference is the first element with a relative position that it can find.*/
-  top: 0;
-  left: 0;
-  z-index: -1; /*The z-index defines the position of the elements if they're one on top of another.
-                   This element is behind the button*/ 
+  z-index: -1; 
   transition: all .4s;
 }
-
+ 
 .btn-white::after{
->>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
   background-color: white;
 }
-
+ 
 .btn:hover::after {
-<<<<<<< HEAD
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+  transform: scaleX(1.4) scaleY(1.6); 
+  opacity: 0; 
 }
-
-.btn-animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-=======
-  transform: scaleX(1.4) scaleY(1.6); /*To increase the element. You can set this with or without X&Y direction*/
-  opacity: 0; /*Will fade out the element*/
-}
-
+ 
 .btn-animated {
   animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; /*Will automatically apply the @keyframes styles at 0% before the animation starts*/
+  animation-fill-mode: backwards; 
 }
->>>>>>> 1d369fd52876a8844f7a3369f9c4b5a1e5424b4a
